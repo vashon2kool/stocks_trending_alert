@@ -122,7 +122,7 @@ def analyze_ticker(ticker: str) -> dict | None:
         console.print(f"[dim]  ⚠ {ticker}: {e}[/dim]")
         return None
 
-
+# ── Render results in a Rich table ─────────────────────────────────────────
 def render_table(results: list[dict]):
     """Print a Rich table sorted by dip score."""
     results.sort(key=lambda r: r["dip_score"], reverse=True)
